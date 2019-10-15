@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+{% if s %}
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong> {{s}} </strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+{% endif %}
+
+<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+<script>
+    paypal.Buttons().render('body');
+</script>
+
+
+
+{% endblock  %}
